@@ -23,7 +23,7 @@ module.exports = {
         test: new RegExp(`src(\\\\|\/)${v}(\\\\|\/)style(\\\\|\/).*\.(css|less)$`),
         use: plugins[k].extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader', 'less-loader']
+          use: ['css-loader', 'less-loader', 'postcss-loader']
         })
       });
     });

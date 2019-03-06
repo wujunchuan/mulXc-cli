@@ -17,7 +17,7 @@ const devConf = merge(baseConf, {
   devServer: {
     clientLogLevel: 'warning',
     inline: true,
-    // hot: true,
+    hot: true,
     open: true,
     host: devConfig.host,
     port: devConfig.port,
