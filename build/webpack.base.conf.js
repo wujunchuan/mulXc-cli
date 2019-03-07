@@ -24,7 +24,8 @@ const baseConf = {
         loader: 'url-loader',
         options: {
           limit: 8192,
-          name: assetsPath('/img/[name].[hash:8].[ext]')
+          name: assetsPath('/img/[name].[hash:8].[ext]'),
+          publicPath: '/'
         }
       },
       {
@@ -41,6 +42,13 @@ const baseConf = {
         options: {
           limit: 8192,
           name: assetsPath('fonts/[name].[hash:8].[ext]')
+        }
+      },
+      // https://stackoverflow.com/questions/46955236/how-to-use-img-src-in-webpack/52589439#52589439
+      {
+        test: /\.html$/,
+        use: {
+            loader: 'html-loader'
         }
       }
     ]
